@@ -231,33 +231,48 @@ function App() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-16 md:py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-            Skills
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-            {skills.map((skill) => (
-              <div 
-                key={skill.name} 
-                className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-[1px] rounded-xl group"
-              >
-                <div className="bg-black p-4 md:p-6 rounded-xl flex flex-col items-center gap-4 transform group-hover:scale-105 transition-all">
-                  <div className={`p-3 md:p-4 rounded-lg bg-gradient-to-br ${skill.color} shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-300`}>
-                    <img 
-                      src={skill.icon} 
-                      alt={skill.name} 
-                      className="w-8 h-8 md:w-12 md:h-12"
-                    />
-                  </div>
-                  <p className="font-medium text-sm md:text-base text-blue-200">{skill.name}</p>
-                </div>
-              </div>
-            ))}
+{/* Skills Section */}
+<section id="skills" className="py-16 md:py-20 px-4">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+      Skills
+    </h2>
+
+    {/* One-liner description */}
+    <p className="mt-2 mb-8 text-center text-sm md:text-base text-gray-300 italic">
+      Combining strong technical skills with a passion for continuous learning and real-world problem solving.
+    </p>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+      {skills.map((skill) => (
+        <div 
+          key={skill.name} 
+          className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-[1px] rounded-xl group"
+        >
+          <div className="bg-black p-4 md:p-6 rounded-xl flex flex-col items-center gap-4 transform group-hover:scale-105 transition-all">
+            {/* Handle Express logo visibility */}
+            {skill.name.toLowerCase() === 'express' ? (
+              <img 
+                src={skill.icon} 
+                alt={skill.name} 
+                className="w-10 h-10 md:w-14 md:h-14 object-contain invert transition-transform duration-300 group-hover:scale-110"
+              />
+            ) : (
+              <img 
+                src={skill.icon} 
+                alt={skill.name} 
+                className="w-10 h-10 md:w-14 md:h-14 object-contain transition-transform duration-300 group-hover:scale-110"
+              />
+            )}
+            <p className="font-medium text-sm md:text-base text-blue-200">{skill.name}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Projects Section */}
       <section id="projects" className="py-16 md:py-20 px-4">
