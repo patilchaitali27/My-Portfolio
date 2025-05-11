@@ -69,7 +69,7 @@ function App() {
       title: "Converges Techfest Website",
       description:
         "An AI-powered study assistant that helps students organize their learning materials and create study schedules.",
-      image: "../public/p2.png",
+      image: "/images/p2.png",
       tech: ["Next.js", "Tailwind CSS", "TypeScript"],
       category: "Javascript",
       link: "https://converges.rcpit.ac.in/",
@@ -79,7 +79,7 @@ function App() {
       title: "Online Testing and Monitoring of Medicines and Consumables",
       description:
         "A system using pH testing to verify whether medicines are fake or degraded, ensuring pharmaceutical quality and safety.",
-      image: "../public/p1.png",
+      image: "/images/p1.png",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
       category: "Mern",
       github:
@@ -89,7 +89,7 @@ function App() {
       title: "Inventory Management Tool",
       description:
         "Developed using Java and Spring Framework, this tool simplifies inventory handling with CRUD operations.",
-      image: "../public/1.png",
+      image: "/images/1.png",
       tech: ["Spring", "Java", "MySQL", "Bootstrap"],
       category: "Java",
       github: "https://github.com/patilchaitali27/Inventory-Management-Tool",
@@ -98,7 +98,7 @@ function App() {
       title: "Steganographic Image Text Hiding Tool",
       description:
         "A simple tool to hide and extract secret messages within images using LSB steganography.",
-      image: "../public/image.png",
+      image: "/images/image.png",
       tech: ["HTML", "CSS", "JavaScript"],
       category: "Javascript",
       github:
@@ -108,7 +108,7 @@ function App() {
       title: "R3sys Digital Bank",
       description:
         "A platform connecting programming students with mentors for real-time code reviews and guidance.",
-      image: "../public/bank.jpg", // Replace with actual image path for this project
+      image: "/images/bank.jpg", // Replace with actual image path for this project
       tech: ["Spring", "Java", "MySQL"],
       category: "Java",
       github: "", // Replace with the actual GitHub repository URL
@@ -117,7 +117,7 @@ function App() {
       title: "Netflix Clone",
       description:
         "A responsive clone of the Netflix homepage built using HTML and CSS to replicate its UI and layout.",
-      image: "../public/netflix.png",
+      image: "/images/netflix.png",
       tech: ["HTML", "CSS"],
       category: "Frontend",
       github: "https://github.com/patilchaitali27/Netflix--Clone",
@@ -321,7 +321,7 @@ function App() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="../public/updated.pdf"
+                href="/images/updated.pdf"
                 download
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white px-6 py-3 rounded-lg hover:from-primary-light/90 hover:to-secondary-light/90 dark:hover:from-primary-dark/90 dark:hover:to-secondary-dark/90 transition-all transform shadow-lg"
               >
@@ -344,7 +344,7 @@ function App() {
                   className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-[400px] md:h-[400px] rounded-full p-2 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark shadow-xl"
                 >
                   <img
-                    src="../public/pic.jpg"
+                    src="/images/pic.jpg"
                     alt="Chaitali Patil"
                     className="w-full h-full object-cover rounded-full border-2 border-background-dark dark:border-background-light"
                   />
