@@ -437,9 +437,9 @@ function App() {
                   className="text-secondary-light dark:text-secondary-dark mb-2"
                   size={24}
                 />
-                <p className="font-semibold">Computer Science</p>
+                <p className="font-semibold">Computer Engineering</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Engineering
+                  B.Tech
                 </p>
               </motion.div>
             </motion.div>
@@ -458,10 +458,10 @@ function App() {
                 className="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border border-primary-light/10 dark:border-primary-dark/10"
               >
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  I'm a passionate and self-taught Computer Science student
+                  I'm a passionate and self-taught Computer Engineering student
                   aspiring to become a full-stack developer. Dedicated to
                   creating innovative solutions that positively impact people's
-                  lives. Skilled in web development and continuously practicing
+                  lives. Skilled in web development and practicing
                   data structures and algorithms to sharpen problem-solving
                   skills. Committed to excellence and always staying updated
                   with the latest technologies. Currently seeking opportunities
