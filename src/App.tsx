@@ -14,6 +14,10 @@ import {
   Code,
   Briefcase,
   Award,
+  GraduationCap,
+  Code,
+  Briefcase,
+  Award,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
@@ -418,13 +422,25 @@ function App() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
 
+      {/* About Page */}
+      <section
+        id="about"
+        className="py-16 md:py-20 px-4 relative overflow-hidden scroll-mt-16"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
+
         <motion.div
+          initial={{ opacity: 0, y: 40 }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="max-w-7xl mx-auto relative z-10"
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto relative z-10"
         >
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
             About Me
           </h2>
