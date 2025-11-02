@@ -10,6 +10,10 @@ import {
   X,
   Sun,
   Moon,
+  GraduationCap,
+  Code,
+  Briefcase,
+  Award,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
@@ -65,6 +69,25 @@ function App() {
   };
 
   const projects = [
+    {
+      title: "International Journal of Frontiers of Engineering and Science",
+      description:
+        "A MERN-based journal management platform for authors, reviewers, and editors. Integrated Cloudinary for secure file uploads and efficient content management.",
+      image: "/images/journal.png",
+      tech: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "Tailwind CSS",
+        "Cloudinary",
+      ],
+      category: "Mern",
+      link: "https://journal-of-interdisciplinary-resear.vercel.app/",
+      github:
+        "https://github.com/patilchaitali27/Journal-of-Interdisciplinary-Research-and-Innovations",
+    },
+
     {
       title: "Converges Techfest Website",
       description:
@@ -128,51 +151,85 @@ function App() {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
-  const skills = [
+ const skills = [
+ {
+  name: "C",
+  icon: "https://e7.pngegg.com/pngimages/724/306/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo.png",
+  color:
+    "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+},
+
+ {
+    name: "C#",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+  },
+  {
+    name: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+  },
+  {
+    name: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+  },
   {
     name: "Java",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "Spring",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "Express",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
   {
     name: "MySQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    color: "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    color:
+      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
   },
 ];
 
@@ -321,7 +378,7 @@ function App() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/images/updated.pdf"
+                href="/images/chaitali_patil_resume (2).pdf"
                 download
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white px-6 py-3 rounded-lg hover:from-primary-light/90 hover:to-secondary-light/90 dark:hover:from-primary-dark/90 dark:hover:to-secondary-dark/90 transition-all transform shadow-lg"
               >
@@ -354,72 +411,109 @@ function App() {
           </div>
         </div>
       </section>
+      {/* About Page */}
+      <section
+        id="about"
+        className="py-16 md:py-20 px-4 relative overflow-hidden scroll-mt-16"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
 
-      {/* About Section */}
-      <section id="about" className="py-16 md:py-20 px-4">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto relative z-10"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
             About Me
           </h2>
-          <div className="bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/10 dark:to-secondary-dark/10 p-[1px] rounded-xl">
-            <div
-              className={`${
-                isDarkMode ? "bg-surface-dark" : "bg-surface-light"
-              } p-8 rounded-xl relative overflow-hidden`}
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative flex justify-center items-center group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 animate-gradient-xy"></div>
-              <div className="relative z-10">
-                <p
-                  className={`${
-                    isDarkMode ? "text-text-dark" : "text-text-light"
-                  } leading-relaxed text-lg font-light`}
-                >
-                  I am a dedicated Computer Science student with a passion for
-                  creating innovative solutions through code. My journey in
-                  technology has equipped me with strong problem-solving skills
-                  and a deep understanding of software development principles.
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="relative w-full max-w-md h-[400px] rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 z-10 pointer-events-none" />
+                <img
+                  src="images/pic.jpg"
+                  alt="Chaitali speaking"
+                  className="w-full h-full object-cover object-center z-0 group-hover:scale-105 transition-transform duration-500"
+                />
+              </motion.div>
+
+              {/* Floating Tag - Right */}
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: -20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                className="absolute -right-4 top-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
+              >
+                <Code
+                  className="text-primary-light dark:text-primary-dark mb-2"
+                  size={24}
+                />
+                <p className="font-semibold">Full Stack</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Development
                 </p>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div
-                    className={`p-4 rounded-lg ${
-                      isDarkMode ? "bg-primary-dark/10" : "bg-primary-light/10"
-                    }`}
-                  >
-                    <h3 className="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">
-                      Education
-                    </h3>
-                    <p
-                      className={`${
-                        isDarkMode ? "text-text-dark" : "text-text-light"
-                      }`}
-                    >
-                      Bachelor of Engineering in Computer Science
-                    </p>
-                  </div>
-                  <div
-                    className={`p-4 rounded-lg ${
-                      isDarkMode ? "bg-primary-dark/10" : "bg-primary-light/10"
-                    }`}
-                  >
-                    <h3 className="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">
-                      Interests
-                    </h3>
-                    <p
-                      className={`${
-                        isDarkMode ? "text-text-dark" : "text-text-light"
-                      }`}
-                    >
-                      Web Development, Software Architecture, AI/ML
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+
+              {/* Floating Tag - Left */}
+              <motion.div
+                initial={{ opacity: 0, x: -20, y: 20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                className="absolute -left-4 bottom-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
+              >
+                <GraduationCap
+                  className="text-secondary-light dark:text-secondary-dark mb-2"
+                  size={24}
+                />
+                <p className="font-semibold">Computer Science</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Engineering
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 150 }}
+                className="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border border-primary-light/10 dark:border-primary-dark/10"
+              >
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  I'm a passionate and self-taught Computer Science student
+                  aspiring to become a full-stack developer. Dedicated to
+                  creating innovative solutions that positively impact people's
+                  lives. Skilled in web development and continuously practicing
+                  data structures and algorithms to sharpen problem-solving
+                  skills. Committed to excellence and always staying updated
+                  with the latest technologies. Currently seeking opportunities
+                  to contribute and make a lasting impact in the field of
+                  software engineering.
+                </p>
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -439,40 +533,53 @@ function App() {
           >
             Experience
           </motion.h2>
-          <div className="relative">
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-light via-secondary-light to-primary-light dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark shadow-[0_0_25px_rgba(59,130,246,0.6)]" />
 
+          <div className="relative">
+            {/* Center Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-light via-secondary-light to-primary-light dark:from-primary-dark dark:via-secondary-dark dark:to-primary-dark shadow-[0_0_25px_rgba(59,130,246,0.6)]" />
+
+            {/* Timeline Items */}
             <div className="space-y-16">
               {[
                 {
-                  title: "Java Developer Intern",
+                  title: "Full Stack Developer Intern",
+                  company:
+                    "R.C. Patel Institute of Technology (College Internship)",
+                  period: "Jul 2025 – Oct 2025",
+                  description:
+                    "Collaborated with a team to design and develop a journal management platform. Built RESTful APIs with Node.js and Express.js, improved frontend UI using React.js and Tailwind CSS, integrated Cloudinary for media storage, and optimized performance through testing and debugging.",
+                },
+                {
+                  title: "Java Developer Training",
                   company: "R3 SYSTEMS INDIA PVT. LTD.",
                   period: "Jul 2024",
                   description:
-                    "Gained hands-on experience in Java, JDBC, Servlets, and the Spring Framework. Worked on scalable web applications, enhanced database performance, and collaborated on real-time projects under professional mentorship.",
+                    "Gained hands-on experience in Java, JDBC, Servlets, and the Spring Framework. Worked on scalable web applications, optimized database queries, and collaborated on live projects under professional guidance.",
                 },
                 {
                   title: "Frontend Developer",
                   company: "Akatsuki Coding Club",
                   period: "Sep 2024 – Present",
                   description:
-                    "Actively contributed to multiple frontend development projects. Took part in planning and managing technical operations during coding events and workshops organized by the club.",
+                    "Contributed to frontend projects and event platforms. Designed responsive interfaces with React.js and Tailwind CSS, and coordinated technical operations during coding events and workshops.",
                 },
               ].map((exp, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className={`relative flex flex-col md:flex-row gap-8 items-center md:items-start ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  className={`relative flex flex-col md:flex-row items-center ${
+                    index % 2 === 0 ? "md:justify-start" : "md:justify-end"
                   }`}
                 >
-                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark shadow-[0_0_25px_rgba(59,130,246,0.8)]" />
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark shadow-[0_0_25px_rgba(59,130,246,0.8)]" />
 
+                  {/* Card */}
                   <div
                     className={`w-full md:w-1/2 p-[2px] rounded-2xl bg-gradient-to-r from-primary-light/30 to-secondary-light/30 dark:from-primary-dark/30 dark:to-secondary-dark/30 hover:shadow-lg hover:shadow-secondary-light/20 dark:hover:shadow-secondary-dark/20 transition-all duration-300 ${
-                      index % 2 === 0 ? "md:text-right" : ""
+                      index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                     }`}
                   >
                     <div
@@ -480,7 +587,7 @@ function App() {
                         isDarkMode ? "bg-surface-dark" : "bg-surface-light"
                       } p-6 md:p-8 rounded-2xl`}
                     >
-                      <h3 className="text-xl md:text-2xl font-bold text-primary-light dark:text-primary-dark">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary-light dark:text-primary-dark text-center md:text-left">
                         {exp.title}
                       </h3>
                       <p
@@ -488,7 +595,7 @@ function App() {
                           isDarkMode
                             ? "text-text-dark/80"
                             : "text-text-light/80"
-                        } mb-2 text-sm md:text-base font-medium`}
+                        } mb-2 text-sm md:text-base font-medium text-center md:text-left`}
                       >
                         {exp.company} • {exp.period}
                       </p>
@@ -497,7 +604,7 @@ function App() {
                           isDarkMode
                             ? "text-text-dark/80"
                             : "text-text-light/80"
-                        } text-sm md:text-base leading-relaxed`}
+                        } text-sm md:text-base leading-relaxed text-center md:text-left`}
                       >
                         {exp.description}
                       </p>
@@ -510,83 +617,82 @@ function App() {
         </div>
       </section>
 
-      {/* skills section */}
-      <section
-        id="skills"
-        className={`py-16 md:py-20 px-4 ${
-          isDarkMode
-            ? "bg-gradient-to-b from-surface-dark via-background-dark to-surface-dark"
-            : "bg-gradient-to-b from-surface-light via-background-light to-surface-light"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-extrabold text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark"
-          >
-            My Skills
-          </motion.h2>
+     {/* skills section */}
+<section
+  id="skills"
+  className={`py-16 md:py-20 px-4 ${
+    isDarkMode
+      ? "bg-gradient-to-b from-surface-dark via-background-dark to-surface-dark"
+      : "bg-gradient-to-b from-surface-light via-background-light to-surface-light"
+  }`}
+>
+  <div className="max-w-6xl mx-auto">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="text-3xl md:text-4xl font-extrabold text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark"
+    >
+      My Skills
+    </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className={`mt-3 mb-10 text-center text-sm md:text-base ${
-              isDarkMode ? "text-text-dark" : "text-text-light"
-            } italic`}
-          >
-            Combining strong technical skills with a passion for continuous
-            learning and real-world problem solving.
-          </motion.p>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className={`mt-3 mb-10 text-center text-sm md:text-base ${
+        isDarkMode ? "text-text-dark" : "text-text-light"
+      } italic`}
+    >
+      Combining strong technical skills with a passion for continuous
+      learning and real-world problem solving.
+    </motion.p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className={`${
-                  isDarkMode
-                    ? "bg-surface-dark bg-opacity-60"
-                    : "bg-surface-light"
-                } backdrop-blur border ${
-                  isDarkMode
-                    ? "border-primary-dark/20"
-                    : "border-primary-light/20"
-                } hover:border-secondary-light dark:hover:border-secondary-dark rounded-xl shadow-lg hover:shadow-secondary-light/30 dark:hover:shadow-secondary-dark/30 p-5 group transition-all duration-300`}
-              >
-                <div className="flex flex-col items-center gap-4">
-                  {skill.name.toLowerCase() === "express" ? (
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="w-12 h-12 md:w-16 md:h-16 object-contain invert group-hover:scale-110 transition-transform duration-300"
-                    />
-                  ) : (
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                  )}
-                  <p
-                    className={`font-medium text-sm md:text-base ${
-                      isDarkMode ? "text-text-dark" : "text-text-light"
-                    } text-center`}
-                  >
-                    {skill.name}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
+      {skills.map((skill, index) => (
+        <motion.div
+          key={skill.name}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+          whileHover={{ scale: 1.05 }}
+          className={`${
+            isDarkMode
+              ? "bg-surface-dark bg-opacity-60"
+              : "bg-surface-light"
+          } backdrop-blur border ${
+            isDarkMode
+              ? "border-primary-dark/20"
+              : "border-primary-light/20"
+          } hover:border-secondary-light dark:hover:border-secondary-dark rounded-xl shadow-lg hover:shadow-secondary-light/30 dark:hover:shadow-secondary-dark/30 p-5 group transition-all duration-300`}
+        >
+          <div className="flex flex-col items-center gap-4">
+            {skill.name.toLowerCase() === "express" ? (
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="w-12 h-12 md:w-16 md:h-16 object-contain invert group-hover:scale-110 transition-transform duration-300"
+              />
+            ) : (
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+            )}
+            <p
+              className={`font-medium text-sm md:text-base ${
+                isDarkMode ? "text-text-dark" : "text-text-light"
+              } text-center`}
+            >
+              {skill.name}
+            </p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
-      
 
       {/* Projects Section */}
       <section id="projects" className="py-16 md:py-20 px-4">
@@ -628,7 +734,7 @@ function App() {
 
           <motion.div
             layout
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
           >
             <AnimatePresence>
               {filteredProjects.map((project, index) => (
@@ -639,13 +745,14 @@ function App() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/10 dark:to-secondary-dark/10 p-[1px] rounded-xl group"
+                  className="flex flex-col h-full bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/10 dark:to-secondary-dark/10 p-[1px] rounded-xl group"
                 >
                   <div
-                    className={`${
+                    className={`flex flex-col flex-1 ${
                       isDarkMode ? "bg-surface-dark" : "bg-surface-light"
                     } rounded-xl overflow-hidden`}
                   >
+                    {/* Image */}
                     <div className="relative h-48 overflow-hidden">
                       <img
                         src={project.image}
@@ -654,38 +761,45 @@ function App() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent" />
                     </div>
-                    <div className="p-6">
-                      <h3
-                        className={`text-xl font-semibold mb-3 ${
-                          isDarkMode ? "text-text-dark" : "text-text-light"
-                        }`}
-                      >
-                        {project.title}
-                      </h3>
-                      <p
-                        className={`${
-                          isDarkMode
-                            ? "text-text-dark/80"
-                            : "text-text-light/80"
-                        } mb-4 text-sm md:text-base`}
-                      >
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tech.map((tech, i) => (
-                          <span
-                            key={i}
-                            className={`text-xs ${
-                              isDarkMode
-                                ? "bg-primary-dark/20 text-primary-dark"
-                                : "bg-primary-light/20 text-primary-light"
-                            } px-2 py-1 rounded`}
-                          >
-                            {tech}
-                          </span>
-                        ))}
+
+                    {/* Content */}
+                    <div className="flex flex-col flex-1 justify-between p-6">
+                      <div>
+                        <h3
+                          className={`text-xl font-semibold mb-3 ${
+                            isDarkMode ? "text-text-dark" : "text-text-light"
+                          }`}
+                        >
+                          {project.title}
+                        </h3>
+                        <p
+                          className={`${
+                            isDarkMode
+                              ? "text-text-dark/80"
+                              : "text-text-light/80"
+                          } mb-4 text-sm md:text-base`}
+                        >
+                          {project.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.tech.map((tech, i) => (
+                            <span
+                              key={i}
+                              className={`text-xs ${
+                                isDarkMode
+                                  ? "bg-primary-dark/20 text-primary-dark"
+                                  : "bg-primary-light/20 text-primary-light"
+                              } px-2 py-1 rounded`}
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex gap-4">
+
+                      {/* Links at bottom */}
+                      <div className="flex gap-4 mt-auto">
                         {project.link && (
                           <motion.a
                             whileHover={{ scale: 1.05 }}
@@ -715,8 +829,6 @@ function App() {
           </motion.div>
         </div>
       </section>
-
-      
 
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-20 px-4">
