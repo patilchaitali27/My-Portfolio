@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+
 import {
   Github,
   Linkedin,
@@ -14,11 +16,8 @@ import {
   Code,
   Briefcase,
   Award,
-  GraduationCap,
-  Code,
-  Briefcase,
-  Award,
 } from "lucide-react";
+
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -155,87 +154,87 @@ function App() {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
- const skills = [
- {
-  name: "C",
-  icon: "https://e7.pngegg.com/pngimages/724/306/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo.png",
-  color:
-    "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-},
+  const skills = [
+    {
+      name: "C",
+      icon: "https://e7.pngegg.com/pngimages/724/306/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo.png",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
 
- {
-    name: "C#",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "Spring",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "Node.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "Express",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-  {
-    name: "MySQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    color:
-      "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
-  },
-];
+    {
+      name: "C#",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "HTML",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "CSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "Java",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "Spring",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "Node.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "Express",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      color:
+        "from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark",
+    },
+  ];
 
   const navItems = ["About", "Skills", "Projects", "Experience", "Contact"];
 
@@ -422,116 +421,112 @@ function App() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
 
-      {/* About Page */}
-      <section
-        id="about"
-        className="py-16 md:py-20 px-4 relative overflow-hidden scroll-mt-16"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto relative z-10"
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto relative z-10"
+        {/* About Page */}
+        <section
+          id="about"
+          className="py-16 md:py-20 px-4 relative overflow-hidden scroll-mt-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-            About Me
-          </h2>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-light/5 via-transparent to-transparent dark:from-primary-dark/5 z-0" />
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image Column */}
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative flex justify-center items-center group"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="max-w-7xl mx-auto relative z-10"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
+              About Me
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image Column */}
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="relative w-full max-w-md h-[400px] rounded-2xl overflow-hidden shadow-2xl"
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative flex justify-center items-center group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 z-10 pointer-events-none" />
-                <img
-                  src="images/pic.jpg"
-                  alt="Chaitali speaking"
-                  className="w-full h-full object-cover object-center z-0 group-hover:scale-105 transition-transform duration-500"
-                />
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="relative w-full max-w-md h-[400px] rounded-2xl overflow-hidden shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 z-10 pointer-events-none" />
+                  <img
+                    src="images/pic.jpg"
+                    alt="Chaitali speaking"
+                    className="w-full h-full object-cover object-center z-0 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </motion.div>
+
+                {/* Floating Tag - Right */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20, y: -20 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute -right-4 top-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
+                >
+                  <Code
+                    className="text-primary-light dark:text-primary-dark mb-2"
+                    size={24}
+                  />
+                  <p className="font-semibold">Full Stack</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Development
+                  </p>
+                </motion.div>
+
+                {/* Floating Tag - Left */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20, y: 20 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute -left-4 bottom-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
+                >
+                  <GraduationCap
+                    className="text-secondary-light dark:text-secondary-dark mb-2"
+                    size={24}
+                  />
+                  <p className="font-semibold">Computer Science</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Engineering
+                  </p>
+                </motion.div>
               </motion.div>
 
-              {/* Floating Tag - Right */}
+              {/* Text Content */}
               <motion.div
-                initial={{ opacity: 0, x: 20, y: -20 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                className="absolute -right-4 top-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
               >
-                <Code
-                  className="text-primary-light dark:text-primary-dark mb-2"
-                  size={24}
-                />
-                <p className="font-semibold">Full Stack</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Development
-                </p>
+                <motion.div
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ type: "spring", stiffness: 150 }}
+                  className="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border border-primary-light/10 dark:border-primary-dark/10"
+                >
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                    I'm a passionate and self-taught Computer Science student
+                    aspiring to become a full-stack developer. Dedicated to
+                    creating innovative solutions that positively impact
+                    people's lives. Skilled in web development and continuously
+                    practicing data structures and algorithms to sharpen
+                    problem-solving skills. Committed to excellence and always
+                    staying updated with the latest technologies. Currently
+                    seeking opportunities to contribute and make a lasting
+                    impact in the field of software engineering.
+                  </p>
+                </motion.div>
               </motion.div>
-
-              {/* Floating Tag - Left */}
-              <motion.div
-                initial={{ opacity: 0, x: -20, y: 20 }}
-                whileInView={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                className="absolute -left-4 bottom-1/4 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-xl cursor-pointer"
-              >
-                <GraduationCap
-                  className="text-secondary-light dark:text-secondary-dark mb-2"
-                  size={24}
-                />
-                <p className="font-semibold">Computer Science</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Engineering
-                </p>
-              </motion.div>
-            </motion.div>
-
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 150 }}
-                className="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-xl border border-primary-light/10 dark:border-primary-dark/10"
-              >
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  I'm a passionate and self-taught Computer Science student
-                  aspiring to become a full-stack developer. Dedicated to
-                  creating innovative solutions that positively impact people's
-                  lives. Skilled in web development and continuously practicing
-                  data structures and algorithms to sharpen problem-solving
-                  skills. Committed to excellence and always staying updated
-                  with the latest technologies. Currently seeking opportunities
-                  to contribute and make a lasting impact in the field of
-                  software engineering.
-                </p>
-              </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </section>
       </section>
 
       {/* Experience Section */}
@@ -633,82 +628,81 @@ function App() {
         </div>
       </section>
 
-     {/* skills section */}
-<section
-  id="skills"
-  className={`py-16 md:py-20 px-4 ${
-    isDarkMode
-      ? "bg-gradient-to-b from-surface-dark via-background-dark to-surface-dark"
-      : "bg-gradient-to-b from-surface-light via-background-light to-surface-light"
-  }`}
->
-  <div className="max-w-6xl mx-auto">
-    <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      className="text-3xl md:text-4xl font-extrabold text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark"
-    >
-      My Skills
-    </motion.h2>
+      {/* skills section */}
+      <section
+        id="skills"
+        className={`py-16 md:py-20 px-4 ${
+          isDarkMode
+            ? "bg-gradient-to-b from-surface-dark via-background-dark to-surface-dark"
+            : "bg-gradient-to-b from-surface-light via-background-light to-surface-light"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-4xl font-extrabold text-center font-space bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark"
+          >
+            My Skills
+          </motion.h2>
 
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-      className={`mt-3 mb-10 text-center text-sm md:text-base ${
-        isDarkMode ? "text-text-dark" : "text-text-light"
-      } italic`}
-    >
-      Combining strong technical skills with a passion for continuous
-      learning and real-world problem solving.
-    </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className={`mt-3 mb-10 text-center text-sm md:text-base ${
+              isDarkMode ? "text-text-dark" : "text-text-light"
+            } italic`}
+          >
+            Combining strong technical skills with a passion for continuous
+            learning and real-world problem solving.
+          </motion.p>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
-      {skills.map((skill, index) => (
-        <motion.div
-          key={skill.name}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          whileHover={{ scale: 1.05 }}
-          className={`${
-            isDarkMode
-              ? "bg-surface-dark bg-opacity-60"
-              : "bg-surface-light"
-          } backdrop-blur border ${
-            isDarkMode
-              ? "border-primary-dark/20"
-              : "border-primary-light/20"
-          } hover:border-secondary-light dark:hover:border-secondary-dark rounded-xl shadow-lg hover:shadow-secondary-light/30 dark:hover:shadow-secondary-dark/30 p-5 group transition-all duration-300`}
-        >
-          <div className="flex flex-col items-center gap-4">
-            {skill.name.toLowerCase() === "express" ? (
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className="w-12 h-12 md:w-16 md:h-16 object-contain invert group-hover:scale-110 transition-transform duration-300"
-              />
-            ) : (
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
-              />
-            )}
-            <p
-              className={`font-medium text-sm md:text-base ${
-                isDarkMode ? "text-text-dark" : "text-text-light"
-              } text-center`}
-            >
-              {skill.name}
-            </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className={`${
+                  isDarkMode
+                    ? "bg-surface-dark bg-opacity-60"
+                    : "bg-surface-light"
+                } backdrop-blur border ${
+                  isDarkMode
+                    ? "border-primary-dark/20"
+                    : "border-primary-light/20"
+                } hover:border-secondary-light dark:hover:border-secondary-dark rounded-xl shadow-lg hover:shadow-secondary-light/30 dark:hover:shadow-secondary-dark/30 p-5 group transition-all duration-300`}
+              >
+                <div className="flex flex-col items-center gap-4">
+                  {skill.name.toLowerCase() === "express" ? (
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-12 h-12 md:w-16 md:h-16 object-contain invert group-hover:scale-110 transition-transform duration-300"
+                    />
+                  ) : (
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-12 h-12 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  )}
+                  <p
+                    className={`font-medium text-sm md:text-base ${
+                      isDarkMode ? "text-text-dark" : "text-text-light"
+                    } text-center`}
+                  >
+                    {skill.name}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-16 md:py-20 px-4">
